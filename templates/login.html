@@ -1,0 +1,61 @@
+<ion-modal-view>
+
+  <ion-header-bar>
+    <div class="buttons">
+      <a ng-click="closeLogin()" class="button icon-left ion-chevron-left button-clear button-dark">Retour</a>
+    </div>
+    <h1 class="title title-modal">Nous contacter</h1>
+  </ion-header-bar>
+  <ion-content>
+  
+    <form ng-submit="doLogin(data)">
+        <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate" ng-model="data.firstname">
+              <label for="first_name">Prénom</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" ng-model="data.lastname">
+              <label for="last_name">Nom</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input id="sujet" type="text" class="validate" ng-model="data.sujet">
+              <label for="sujet">Sujet</label>
+            </div>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" ng-model="data.texte"></textarea>
+          <label for="textarea1">Votre texte</label>
+        </div>
+      </div>
+       <div class="row">
+           <div class="input-field col s12">
+               <input type="submit" value="Valider" class="btn btn-default"/>
+           </div>
+        </div>
+    </form>
+	
+      <div class="item item-button-right">
+        Appeler l'accueil
+          <a  ng-href="tel:+33 600 888 555">
+              <button class="button button-positive appel">
+                  <i class="icon ion-ios-telephone"></i>
+              </button>
+          </a>
+      </div>
+      <div class="item item-button-right">
+          Mail :
+          <p>contact@zoalone.com</p>
+      </div>
+      <div class="item item-button-right">
+         Adresse :
+         <p>14 rue du Zoo</p>
+         <p>13000 Marseille</p>
+
+      </div>
+
+  </ion-content>
+</ion-modal-view>

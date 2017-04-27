@@ -1,0 +1,26 @@
+<ion-view view-title="Carte">
+  <ion-content>
+	 <div class="map">
+		 <ng-include src="'img/terrain.svg'">
+	 	 </ng-include>
+	 </div>
+	 
+	  <div id="carte" ng-show="hide">
+		  <div class='row'>
+			  <div class='visite'>
+				  <h4 class="text-center">{{nom}}</h4>
+				  <p class=' texte'><img class='carte' src='{{img}}' alt=""/>{{description}}</p>
+			  </div>
+		 </div>
+		  <div class='row'>
+			  <div class='col col-80 col-offset-10'>
+				  <ion-item menu-close ng-click="animaux(id)" class="carte-animaux" ng-hide="show">
+					  <button type="button" class="btn btn-default">Les animaux </button>
+				  </ion-item>
+			  </div>
+		  </div>
+	  </div>
+
+
+  </ion-content>
+</ion-view>

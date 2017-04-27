@@ -1,0 +1,20 @@
+<ion-view view-title="Visite">
+  <ion-content scroll="true" >
+		  <ion-slides  options="options" slider="data.slider" >
+				<ion-slide-page ng-repeat="item in img">
+					<div class="box"><img src='{{item}}'/></div>
+				</ion-list>
+		  </ion-slides>
+
+
+		<div class='visite'>
+			<h4 class="text-center">{{nom}}</h4>
+			<p class=' texte'><img class='carte' src='{{carte}}' alt=""/>{{description}}</p>
+            <div class="row boutons">
+			    <button class="col col-33 col-offset-33 btn btn-success ion-radio-waves" ng-click="player()"></button>
+            </div>
+			<h6 class="rafraichir">Vous changez d'endroit ? Rafraichir </h6>
+		</div>
+		
+  </ion-content>
+</ion-view>
